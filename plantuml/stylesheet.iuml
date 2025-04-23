@@ -1,0 +1,485 @@
+@startuml
+' Load preset styles.
+!define STYLE_ACCENT #000
+!define STYLE_BGC #FFF
+!define STYLE_FGC #000
+!define STYLE_HL_BGC #DADADA
+!define STYLE_GLOBAL_BGC #ECECEC
+
+' hide circle
+hide footbox
+
+scale 0.5
+
+skinparam Default {
+'	FontColor
+	FontName Ubuntu Mono for Powerline
+	FontSize 14
+'	FontStyle
+}
+skinparam roundcorner           8
+' skinparam ParticipantPadding    40
+' skinparam BoxPadding            40
+skinparam Padding               2
+skinparam DPI 200
+
+skinparam title {
+  FontSize	    	         20
+	BorderRoundCorner         8
+	BorderThickness 	        1
+}
+
+skinparam Activity {
+	ArrowColor STYLE_ACCENT
+'	ArrowFontColor
+'	ArrowFontName
+'	ArrowFontSize
+'	ArrowFontStyle
+	BackgroundColor STYLE_BGC
+'	BarColor
+	BorderColor STYLE_ACCENT
+'	BorderThickness
+'	DiamondFontColor
+'	DiamondFontName
+'	DiamondFontSize
+'	DiamondFontStyle
+'	EndColor
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StartColor
+}
+skinparam Actor {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+	FontStyle Bold
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Agent {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Artifact {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam BackgroundColor STYLE_GLOBAL_BGC
+skinparam Boundary {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Caption {
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+}
+skinparam Circled {
+'	CharacterFontColor
+'	CharacterFontName
+'	CharacterFontSize
+'	CharacterFontStyle
+'	CharacterRadius
+}
+<style>
+classDiagram {
+	class {
+		BackgroundColor STYLE_BGC
+	  BorderColor STYLE_ACCENT
+	  header {
+	  	BackgroundColor STYLE_BGC
+	  	FontStyle bold
+	  	FontSize 16
+	  }
+	}
+}
+
+</style>
+
+skinparam Cloud {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Collections {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+}
+skinparam Component {
+	ArrowColor STYLE_ACCENT
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Control {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+	FontStyle bold
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Database {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+	FontStyle Bold
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+
+skinparam Entity {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Folder {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Footer {
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+}
+skinparam Frame {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+' FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Generic {
+'	ArrowFontColor
+' ArrowFontName
+' ArrowFontSize
+'	ArrowFontStyle
+}
+skinparam Header {
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+}
+'skinparam HyperlinkColor
+skinparam Icon {
+	PackageBackgroundColor STYLE_BGC
+'	PackageColor
+	PrivateBackgroundColor STYLE_BGC
+'	PrivateColor
+	ProtectedBackgroundColor STYLE_BGC
+'	ProtectedColor
+	PublicBackgroundColor STYLE_BGC
+'	PublicColor
+}
+skinparam Interface {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Legend {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+' FontSize
+'	FontStyle
+}
+'skinparam Monochrome true
+skinparam Node {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Note {
+	BackgroundColor #F7D56C
+	BorderColor STYLE_ACCENT
+'	BorderThickness
+'	FontColor
+'	FontName
+' FontSize
+'	FontStyle
+}
+skinparam Object {
+	ArrowColor STYLE_ACCENT
+'	AttributeFontColor
+'	AttributeFontName
+'	AttributeFontSize
+'	AttributeFontStyle
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	BorderThickness
+'	FontColor
+'	FontName
+' FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Package {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	BorderThickness
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Participant {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+	FontStyle Bold
+}
+skinparam Partition {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	BorderThickness
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+}
+skinparam Queue {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Rectangle {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Shadowing false
+skinparam SequenceMessageAlign center
+skinparam Sequence {
+	ActorBorderThickness 1
+	ArrowColor STYLE_ACCENT
+'	ArrowFontColor
+'	ArrowFontName
+'	ArrowFontSize
+'	ArrowFontStyle
+'	ArrowThickness
+	BoxBackgroundColor STYLE_HL_BGC
+	BoxBorderColor STYLE_ACCENT
+'	BoxFontColor
+'	BoxFontName
+'	BoxFontSize
+'	BoxFontStyle
+'	DelayFontColor
+'	DelayFontName
+'	DelayFontSize
+'	DelayFontStyle
+	DividerBackgroundColor STYLE_BGC
+	DividerBorderColor STYLE_ACCENT
+	DividerBorderThickness 1
+'	DividerFontColor
+'	DividerFontName
+'	DividerFontSize
+'	DividerFontStyle
+	GroupBackgroundColor STYLE_BGC
+'	GroupBodyBackgroundColor STYLE_BGC
+	GroupBorderColor STYLE_ACCENT
+'	GroupBorderThickness
+'	GroupFontColor
+'	GroupFontName
+'	GroupFontSize
+'	GroupFontStyle
+'	GroupHeaderFontColor
+'	GroupHeaderFontName
+'	GroupHeaderFontSize
+'	GroupHeaderFontStyle
+	LifeLineBackgroundColor STYLE_BGC
+	LifeLineBorderColor STYLE_ACCENT
+'	LifeLineBorderThickness
+'	NewpageSeparatorColor
+	ParticipantBorderThickness 1
+	ReferenceBackgroundColor STYLE_BGC
+	ReferenceBorderColor STYLE_ACCENT
+'	ReferenceBorderThickness
+'	ReferenceFontColor
+'	ReferenceFontName
+'	ReferenceFontSize
+'	ReferenceFontStyle
+	ReferenceHeaderBackgroundColor STYLE_BGC
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+'	TitleFontColor
+'	TitleFontName
+'	TitleFontSize
+'	TitleFontStyle
+}
+skinparam State {
+	ArrowColor STYLE_ACCENT
+'	AttributeFontColor
+'	AttributeFontName
+'	AttributeFontSize
+'	AttributeFontStyle
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	EndColor
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StartColor
+}
+skinparam Stereotype {
+	ABackgroundColor STYLE_BGC
+	CBackgroundColor STYLE_BGC
+	EBackgroundColor STYLE_BGC
+	IBackgroundColor STYLE_BGC
+}
+skinparam Storage {
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+skinparam Swimlane {
+	BorderColor STYLE_ACCENT
+'	BorderThickness
+'	TitleFontColor
+'	TitleFontName
+'	TitleFontSize
+'	TitleFontStyle
+}
+skinparam Title {
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+}
+skinparam Usecase {
+	ArrowColor STYLE_ACCENT
+	BackgroundColor STYLE_BGC
+	BorderColor STYLE_ACCENT
+'	FontColor
+'	FontName
+'	FontSize
+'	FontStyle
+'	StereotypeFontColor
+'	StereotypeFontName
+'	StereotypeFontSize
+'	StereotypeFontStyle
+}
+
+@enduml
